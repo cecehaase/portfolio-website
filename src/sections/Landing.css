@@ -1,0 +1,42 @@
+.name {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-100%);
+    animation: slideIn 2s forwards;
+  }
+  
+  .name.animate {
+    animation-play-state: running;
+  }
+  
+  .nav-bar {
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .nav-bar.animate {
+    opacity: 1;
+    animation-play-state: running;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
