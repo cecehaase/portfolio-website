@@ -32,7 +32,7 @@ export const Landing = ({ onNavigate }: LandingProps) => {
       {/* Name */}
       <div className="flex items-center gap-4 md:gap-6 mb-12">
         <span
-          className={`text-5xl md:text-7xl lg:text-8xl font-bold text-white transition-all duration-1000 ease-out ${
+          className={`text-5xl md:text-7xl lg:text-8xl font-bold text-[#003049ff] transition-all duration-1000 ease-out ${
             nameVisible
               ? 'opacity-100 translate-x-0'
               : 'opacity-0 -translate-x-full'
@@ -41,7 +41,7 @@ export const Landing = ({ onNavigate }: LandingProps) => {
           Cecelia
         </span>
         <span
-          className={`text-5xl md:text-7xl lg:text-8xl font-bold text-white transition-all duration-1000 ease-out ${
+          className={`text-5xl md:text-7xl lg:text-8xl font-bold text-[#003049ff] transition-all duration-1000 ease-out ${
             nameVisible
               ? 'opacity-100 translate-x-0'
               : 'opacity-0 translate-x-full'
@@ -62,7 +62,7 @@ export const Landing = ({ onNavigate }: LandingProps) => {
             <li key={item.page}>
               <button
                 onClick={() => onNavigate(item.page)}
-                className="text-lg md:text-xl font-medium text-foreground/70 hover:text-white transition-colors duration-300 cursor-pointer"
+                className="text-lg md:text-xl font-medium text-[#003049ff] hover:text-[#003049ff] transition-colors duration-300 cursor-pointer"
               >
                 {item.label}
               </button>

@@ -18,7 +18,7 @@ export const NavBar = ({ onNavigate }: NavBarProps) => {
       <div className="glass rounded-full px-6 py-3 flex justify-between items-center max-w-4xl mx-auto">
         <button
           onClick={() => onNavigate('landing')}
-          className="font-bold text-lg text-white cursor-pointer"
+          className="font-bold text-lg text-[#003049ff] cursor-pointer"
         >
           CH
         </button>
@@ -27,7 +27,7 @@ export const NavBar = ({ onNavigate }: NavBarProps) => {
             <li key={item.page}>
               <button
                 onClick={() => onNavigate(item.page)}
-                className="hover:text-white text-foreground/70 transition-colors duration-300 cursor-pointer"
+                className="hover:text-[#003049ff] text-[#003049ff] transition-colors duration-300 cursor-pointer"
               >
                 {item.label}
               </button>

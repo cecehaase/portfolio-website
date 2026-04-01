@@ -11,7 +11,7 @@ export const About = () => {
   
               <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
                 Full stack,
-                <span className="font-serif italic font-normal text-white">
+                <span className="font-serif italic font-normal text-[#c1121fff]">
                   {" "}
                   full ownership.
                 </span>

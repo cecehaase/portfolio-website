@@ -81,7 +81,7 @@ export const Skills = () => {
                 <br />
                 experiences with
                 <br />
-                <span className="font-serif italic font-normal text-white">
+                <span className="font-serif italic font-normal text-[#c1121fff]">
                   precision.
                 </span>
               </h1>

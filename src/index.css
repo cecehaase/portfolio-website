@@ -1,63 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #145b9e;
-  --color-foreground: #8fc2f9;
+  --molten-lava: #780000ff;
+  --brick-red: #c1121fff;
+  --papaya-whip: #fdf0d5ff;
+  --deep-space-blue: #003049ff;
+  --steel-blue: #669bbcff;
 
-  --color-primary: #0b345b;
-  --color-secondary: #fff;
-  --color-accent: #fff;
-  --color-accent-border: #fff;
-  --color-accent-bg: #fff;
+  --color-background: var(--papaya-whip);
+  --color-foreground: var(--steel-blue);
+
+  --color-primary: var(--deep-space-blue);
+  --color-secondary: var(--molten-lava);
+  --color-accent: var(--molten-lava);
+  --color-accent-border: var(--steel-blue);
+  --color-accent-bg: var(--steel-blue);
 
   --border-radius: 0.5rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-highlight: var(--brick-red);
+  --color-surface: var(--steel-blue);
 
 }
 
 html {
   background-color: var(--color-background);
-  color: var(--color-foreground);
+  color: var(--deep-space-blue);
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-family: system-ui, sans-serif;
+  color: var(--deep-space-blue);
+  font-family: 'Libre Baskerville', system-ui, sans-serif;
+}
+
+em, i {
+  color: var(--brick-red);
 }
 
 @layer components {
-  .button {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: 1px solid var(--color-accent-border);
-    border-radius: var(--border-radius);
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  }
   .glass {
     background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
     backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
-  }
-  .glass-strong {
-    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter: blur(24px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    border: 1px solid color-mix(in srgb, var(--steel-blue) 50%, transparent);
+    color: var(--molten-lava);
   }
 
   .glow-text {
+    color: var(--deep-space-blue);
     text-shadow: 0 0 30px
-      color-mix(in srgb, var(--color-primary) 50%, transparent);
+      color-mix(in srgb, var(--steel-blue) 50%, transparent);
   }
 
   .glow-border {
     box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+        color-mix(in srgb, var(--steel-blue) 20%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--steel-blue) 5%, transparent);
   }
 }
 @layer utilities {
@@ -137,40 +136,7 @@ body {
     animation-delay: 400ms;
   }
 
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
   .animation-delay-600 {
     animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
-
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-
-  .group:hover .animated-border-path {
-    animation: animated-border 1.5s linear infinite;
-  }
-
-  .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-  }
-
-  .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
-      0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
 }

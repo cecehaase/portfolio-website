@@ -63,7 +63,7 @@ const experiences = [
               text-secondary-foreground"
             >
               Experience that{" "}
-              <span className="font-serif italic font-normal text-white">
+              <span className="font-serif italic font-normal text-[#c1121fff]">
                 {" "}
                 creates impact.
               </span>
